@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+    <head>
+	<title>ICHABAV - head</title>
+        <link rel="stylesheet" href="styles.css">
+        <script>
+            function copyLink() {
+                var copyText = document.getElementById("siteLink");
+                copyText.select(); 
+                copyText.setSelectionRange(0, 99999); // Pour mobile
+            
+                document.execCommand("copy");
+                alert("Lien copié : " + copyText.value);
+            }
+        </script>
+    </head>
+    <body>
+        <center><h1 class="glitch">help me spread this warning online</h1></center>
+        <br>
+        <p>it's very simple: to make as many people as possible aware of malicious sites, try to put the link to this site in as many places as possible:</p>
+        <p>hyperlink on social networks, send it to your friends to see their reaction, etc.</p>
+        <p>thank you</p>
+        <br>
+        <p>copy the website link :</p>
+        <button onclick="copyLink()">copy the link</button>
+        <input type="text" value="https://www.ton-site.com" id="siteLink" readonly>
+        <br><br>
+        <a href="index.html"><button>get back to the main page</button></a>
+    </body>
+</html>

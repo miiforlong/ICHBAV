@@ -1,0 +1,69 @@
+
+body {
+    background-color: rgb(128, 164, 197);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif
+}
+
+    .glitch {
+        color: white;
+        position: relative;
+        animation: glitch 1s infinite;
+        }
+
+        @keyframes glitch {
+            0% {
+                text-shadow: 2px 2px red; /* Ombre rouge en haut à gauche */
+                transform: translate(2px, 2px); /* Légèrement décalé */
+            }
+            25% {
+                text-shadow: -2px -2px blue; /* Ombre bleue en bas à droite */
+                transform: translate(-2px, -2px); /* Décalé dans l'autre sens */
+            }
+            50% {
+                text-shadow: 2px -2px green; /* Ombre verte à un angle différent */
+                transform: translate(2px, -2px); /* Nouveau décalage */
+            }
+            75% {
+                text-shadow: -2px 2px purple; /* Ombre violette */
+                transform: translate(-2px, 2px); /* Retour à une autre position */
+            }
+            100% {
+                text-shadow: 2px 2px red; /* Retour à la position initiale */
+                transform: translate(0, 0); /* Le texte revient à sa place */
+            }
+}
+
+
+@keyframes warningBlink {
+    0%, 100% {
+        color: red;
+    }
+    50% {
+        color: yellow;
+    }
+}
+
+.warning-text {
+    animation: warningBlink 1s infinite;
+}
+
+@keyframes buttonanimate {
+    0% {
+        border-color: blue;
+    }
+    100% {
+        border-color: red;
+    }
+}
+
+button {
+    background-color: aqua;
+    animation: buttonanimate 2s infinite;
+    border-radius: 10px;
+}
+
+input {
+    background-color: rgb(128, 164, 197);
+    border-radius: 3px;
+    animation: buttonanimate 2s infinite;
+}
